@@ -2,7 +2,7 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.colors import Color
 from io import BytesIO
-from datetime import datetime, timedelta
+from datetime import datetime
 
 PAGE_W, PAGE_H = 612, 792
 LEFT = 13.6
@@ -212,9 +212,9 @@ def count_pages(trimesters):
 def generate_pdf(student_data, trimesters):
     buf = BytesIO()
 
-    # +3.5 hours offset and original date format (no leading zeros)
-    now = datetime.now() + timedelta(hours=3, minutes=30)
-    print_date = f"{now.day}/{now.month}/{now.year} {now.strftime('%H:%M')} PM"
+    now = datetime.now()
+    period = "PM" if now.hour >= 12 else "AM"
+    print_date = f"{now.day}/{now.month}/{now.year} {now.strftime('%H:%M')} {period}"
 
     content_pages = count_pages(trimesters)
     total_pages = content_pages + 1  # +1 for trailing blank page
