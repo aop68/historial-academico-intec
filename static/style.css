@@ -1,0 +1,59 @@
+body {
+  background: #f0f2f5;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.bg-intec {
+  background-color: #1a3a6b !important;
+}
+
+.section-header {
+  background-color: #1a3a6b;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.card {
+  border: none;
+  border-radius: 8px;
+}
+
+.card-header {
+  border-radius: 8px 8px 0 0 !important;
+}
+
+.trimester-card {
+  border-left: 4px solid #1a3a6b !important;
+}
+
+.form-label {
+  font-size: 0.8rem;
+  margin-bottom: 3px;
+  color: #444;
+}
+
+.form-control {
+  font-size: 0.85rem;
+}
+
+.table th {
+  font-size: 0.78rem;
+  color: #555;
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 3px 4px;
+  vertical-align: middle;
+}
+
+.btn-success {
+  background-color: #1a3a6b;
+  border-color: #1a3a6b;
+}
+
+.btn-success:hover {
+  background-color: #122b50;
+  border-color: #122b50;
+}
